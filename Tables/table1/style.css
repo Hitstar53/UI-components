@@ -1,0 +1,69 @@
+html {
+    color-scheme: dark;
+}
+
+body {
+    color: #eee;
+    font-size: 1.2rem;
+    font-family: system-ui;
+    line-height: 1.5;
+}
+
+.wrapper {
+    width: min(900px, 100% - 3rem);
+    margin-inline: auto;
+}
+
+table {
+    width: 100%;
+    background: #323232;
+    border-collapse: collapse;
+}
+
+caption, th, td {
+    padding: 1rem;
+}
+
+caption,thead {
+    text-align: left;
+}
+
+caption {
+    background: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #222;
+}
+
+tr:nth-child(even) {
+    background: #444;
+}
+
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+    td {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0.5rem 1rem;
+    }
+    td::before {
+        content: attr(data-cell) ": ";
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+    td:first-child {
+        padding-top: 1.5rem;
+    }
+    td:last-child {
+        padding-bottom: 1.5rem;
+    }
+}
