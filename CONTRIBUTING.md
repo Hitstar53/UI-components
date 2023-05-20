@@ -15,6 +15,26 @@ Before making any contributions, please ensure that your changes meet the follow
 - All UI components must be well-documented with clear and concise instructions on how to use them.
 - Any new components must be placed in the appropriate subdirectory within the repository.
 
+### File Structure
+
+The UI-components repository is structured as follows:
+
+```
+UI-components
+├── README.md 
+├── Navbars
+│   ├── Navbar1
+│   │   ├── navbar1.html
+│   │   ├── navbar1.css
+│   │   └── navbar1.js 
+├── Footers
+│   ├── Footer1
+│   │   ├── footer1.html
+│   │   ├── footer1.css
+│   │   └── footer1.js
+
+```
+
 ### Pull Request Process
 
 Once you have made your contributions, you can create a pull request to submit them. To create a pull request, please follow these steps:
