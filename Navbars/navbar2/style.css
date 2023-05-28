@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Pangolin:regular);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color-scheme: dark;
+}
+
+body {
+    font-family: 'Pangolin', sans-serif;
+}
+
+nav {
+    background-color: #222;
+    padding: 0.5rem 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__links li {
+    font-size: 1rem;
+    padding: 15px 5px;
+}
+
+.nav__links li a {
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: teal;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* mobile menu */
+.nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item.btn {
+    order: 2;
+}
+.nav-item {
+    display: none;
+    order: 3;
+    width: 100%;
+    text-align: center;
+}
+.nav-item.active {
+    display: block;
+}
+/* hamburger icon */
+.nav-toggle {
+    order: 1;
+    cursor: pointer;
+}
+.nav-open,
+.nav-close {
+    display: none;
+}
+.nav-open.active,
+.nav-close.active {
+    display: block;
+}
+.bars {
+    background-color: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 20px;
+}
+.bars::before,
+.bars::after {
+    content: '';
+    background-color: #999;
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+}
+.bars::before {
+    top: 7px;
+}
+.bars::after {
+    top: -7px;
+}
+
+/* tablet menu */
+@media screen and (min-width: 468px) {
+    nav {
+        padding: 0.5rem 1rem;
+    }
+    .nav__links {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .nav-item.btn {
+        order: 1;
+        width: auto;
+        display: block;
+    }
+    .nav-toggle {
+        order: 2;
+    }
+    .btn a {
+        padding: 7px 15px;
+        border-radius: 100vw;
+        background-color: teal;
+    }
+    .nav-item.btn a:hover {
+        color: #fff;
+        background-color: #006d6d;
+    }
+    .btn.secondary a {
+        border: 1px solid teal;
+        background: transparent;
+    }
+}
+
+/* desktop menu */
+@media screen and (min-width: 768px) {
+    nav {
+        padding: 0.5rem 3rem;
+    }
+    .nav-item {
+        display: block;
+        width: auto;
+        order: 1;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .nav__links li {
+        padding: 15px 10px;
+    }
+    .nav-item.btn {
+        order: 2;
+        padding-right: 0;
+    }
+}
