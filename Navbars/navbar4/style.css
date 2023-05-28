@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous:regular');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Righteous', sans-serif;
     background: #e3e9f7;
 }
 
@@ -72,7 +74,20 @@ nav ul li a.active {
     margin: 5px 0;
     transition: all 0.3s ease;
 }
-
+.dropdown-container {
+    display: none;
+    position: absolute;
+    top: 70px;
+    width: 150px;
+    background-color: #fefefe;
+    padding: 8px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.dropdown-container a {
+    border-radius: 5px;
+}
 @media screen and (max-width: 1100px) {
     nav {
         position: absolute;
@@ -108,5 +123,15 @@ nav ul li a.active {
     }
     .hamburger {
         display: block;
+    }
+    .dropdown-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
     }
 }

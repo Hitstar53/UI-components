@@ -19,9 +19,19 @@
             <ul class="nav-links">
                 <li class="nav-item"><a class="active" href="#">Home</a></li>
                 <li class="nav-item"><a href="#">Features</a></li>
-                <li class="nav-item"><a href="#">About Us</a></li>
                 <li class="nav-item"><a href="#">Services</a></li>
-                <li class="nav-item"><a href="#">Contact Us</a></li>
+                <li class="nav-item dropdown-item">
+                    <a href="#" class="dropdown-btn">
+                        Profile <i class="fas fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-container">
+                        <a href="#">View profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">logout</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#">About Us</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="hamburger">
@@ -34,9 +44,14 @@
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('nav');
         const navLinks = document.querySelectorAll('.nav-item a');
+        const dropdownBtn = document.querySelector('.dropdown-btn');
+        const dropdownContainer = document.querySelector('.dropdown-container');
+        dropdownBtn.addEventListener('click', () => {
+            dropdownContainer.style.display = dropdownContainer.style.display === 'block' ? 'none' : 'block';
+        });
         navLinks.forEach(item => {
             item.addEventListener('click', () => {
-                item.classList.toggle('active');
+                item.classList.add('active');
                 navLinks.forEach(link => {
                     if(link !== item){
                         link.classList.remove('active');
@@ -48,5 +63,6 @@
             nav.style.left = nav.style.left === '0px' ? '-300px' : '0px';
         });
     </script>
+    <script src="https://kit.fontawesome.com/ccf941b7da.js" crossorigin="anonymous"></script>
 </body>
 </html>
