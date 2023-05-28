@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar 4 | Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">Brand</a>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Brand</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a class="active" href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Features</a></li>
+                <li class="nav-item"><a href="#">About Us</a></li>
+                <li class="nav-item"><a href="#">Services</a></li>
+                <li class="nav-item"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('.nav-item a');
+        navLinks.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                navLinks.forEach(link => {
+                    if(link !== item){
+                        link.classList.remove('active');
+                    }
+                });
+            });
+        });
+        hamburger.addEventListener('click', () => {
+            nav.style.left = nav.style.left === '0px' ? '-300px' : '0px';
+        });
+    </script>
+</body>
+</html>
