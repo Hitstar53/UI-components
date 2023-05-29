@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #333;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.footer-content {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content .socials {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content .socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.footer-content .socials a:hover {
+    color: #fff;
+    transform: scale(1.2);
+    border: none;
+}
+
+.footer-content .socials a:nth-child(1):hover {
+    background-color: #3b5998;
+}
+
+.footer-content .socials a:nth-child(2):hover {
+    background-color: #e4405f;
+}
+
+.footer-content .socials a:nth-child(3):hover {
+    background-color: #000;
+}
+
+.footer-content .socials a:nth-child(4):hover {
+    background-color: #0077b5;
+}
+
+.footer-content .socials a:nth-child(5):hover {
+    background-color: #55acee5f;
+}
+
+.footer-content .socials a:nth-child(6):hover {
+    background-color: #ea4c89;
+}
+
+.footer-content .socials a:nth-child(7):hover {
+    background-color: #cd201f;
+}
+
+.footer-content .socials a:nth-child(8):hover {
+    background-color: #7289da95;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.footer-menu a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #333;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.move-up {
+    animation: move 1s ease-in-out infinite alternate;
+}
+
+.move-up:hover {
+    animation: none;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.footer-content p {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0.5rem 0 1.5rem 0;
+    opacity: 0.7;
+}
