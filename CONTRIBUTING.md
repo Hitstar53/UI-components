@@ -24,14 +24,14 @@ UI-components
 ├── README.md 
 ├── Navbars
 │   ├── Navbar1
-│   │   ├── navbar1.html
-│   │   ├── navbar1.css
-│   │   └── navbar1.js 
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── script.js 
 ├── Footers
 │   ├── Footer1
-│   │   ├── footer1.html
-│   │   ├── footer1.css
-│   │   └── footer1.js
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── script.js
 
 ```
 
