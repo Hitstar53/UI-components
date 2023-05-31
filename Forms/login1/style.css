@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial:regular');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0));
+    background-size: cover;
+    background-position: center;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 50px 60px 70px 60px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h1 {
+    font-size: 2rem;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+    color: #3c00a0;
+}
+
+.form-box h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    border-radius: 3px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 4px;
+    background: #3c00a0;
+}
+
+.input-field {
+    margin: 15px 0;
+    max-height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background: #eaeaea;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.input-field i {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #3c00a0;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field input {
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 18px 15px;
+    font-size: 1rem;
+    color: #333;
+    background: transparent;
+}
+
+form p {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+form p a {
+    color: #3c00a0;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn-field button {
+    width: 48%;
+    padding: 15px 20px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background: #ccc;
+    text-transform: capitalize;
+    transition: background 0.7s ease;
+    cursor: pointer;
+}
+
+button.active {
+    color: #fff;
+    background: #3c00a0;
+}

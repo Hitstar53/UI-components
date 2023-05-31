@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login 1 | 2-in-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-field" id="name-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="input-field" id="confirm-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                    <p id="form-text">
+                        Terms and Conditions <a href="#">Click Here</a>
+                    </p>
+                </div>
+                <div class="btn-field">
+                    <button class="active" type="button" id="signup-btn">Sign up</button>
+                    <button type="button" id="signin-btn">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/ccf941b7da.js" crossorigin="anonymous"></script>
+    <script>
+        const signupBtn = document.getElementById('signup-btn');
+        const signinBtn = document.getElementById('signin-btn');
+        const title = document.getElementById('title');
+        const nameField = document.getElementById('name-field');
+        const confirmField = document.getElementById('confirm-field');
+        const formText = document.getElementById('form-text');
+
+        signupBtn.addEventListener('click', () => {
+            title.innerHTML = 'Sign Up';
+            nameField.style.maxHeight = '65px';
+            confirmField.style.maxHeight = '65px';
+            formText.innerHTML = 'Terms and Conditions <a href="#">Click Here</a>';
+            signupBtn.classList.add('active');
+            signinBtn.classList.remove('active');
+        });
+
+        signinBtn.addEventListener('click', () => {
+            title.innerHTML = 'Sign In';
+            nameField.style.maxHeight = '0';
+            confirmField.style.maxHeight = '0';
+            formText.innerHTML = 'Forgot Password? <a href="#">Click Here</a>';
+            signinBtn.classList.add('active');
+            signupBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

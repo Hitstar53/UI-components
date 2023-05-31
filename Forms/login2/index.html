@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 2 | Animated</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <h1 class="title">Login</h1>
+        <form action="">
+            <div class="input-field">
+                <input type="email" value="" required>
+                <i class="fas fa-envelope"></i>
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" value="" required>
+                <i class="fas fa-lock"></i>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <button class="btn" type="submit" value="Login">Login</button>
+            <div class="signup-link">
+                Not a member? <a href="#">Signup</a>
+            </div>
+        </form>
+    </div>
+    <div class="center">
+        <h1 class="title">Sign Up</h1>
+        <form action="">
+            <div class="input-field">
+                <input type="text" value="" required>
+                <i class="fas fa-user"></i>
+                <label>Username</label>
+            </div>
+            <div class="input-field">
+                <input type="email" value="" required>
+                <i class="fas fa-envelope"></i>
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" value="" required>
+                <i class="fas fa-lock"></i>
+                <label>Password</label>
+            </div>
+            <div class="input-field">
+                <input type="password" value="" required>
+                <i class="fas fa-lock"></i>
+                <label>Confirm Password</label>
+            </div>
+            <button class="btn" type="submit" value="Login">Sign Up</button>
+            <div class="signup-link">
+                Already a member? <a href="#">Login</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/ccf941b7da.js" crossorigin="anonymous"></script>
+    <script>
+        const inputs = document.querySelectorAll(".input-field input");
+
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                if(input.value !== "") {
+                    input.classList.add("has-value");
+                } else {
+                    input.classList.remove("has-value");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
