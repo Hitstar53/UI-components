@@ -8,6 +8,109 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="title">Registration Form</div>
+        <form action="">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="number" placeholder="Enter phone number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date of Birth</span>
+                    <input type="text" placeholder="Enter date of birth" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date of Birth</span>
+                    <select name="day" id="day" required>
+                        <option value="day" disabled selected>Day</option>
+                    </select>
+                    <select name="month" id="month" required>
+                        <option value="month" disabled selected>Month</option>
+                    </select>
+                    <select name="year" id="year" required>
+                        <option value="year" disabled selected>Year</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Address</span>
+                    <input type="text" placeholder="Enter your address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="gender-details">
+                <span class="gender-title">Gender</span>
+                <div class="gender-select">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="bisexual">
+                        Bisexual
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="others">
+                        Others
+                    </label>
+                </div>
+            </div>
+            <div class="btn">
+                <button type="submit">
+                    Register <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="signup-link">
+                Already have an account? <a href="#">Login now</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/ccf941b7da.js" crossorigin="anonymous"></script>
+    <script>
+        const day = document.getElementById('day');
+        const month = document.getElementById('month');
+        const year = document.getElementById('year');
+        var currentYear = new Date().getFullYear();
+
+        for(let i=1; i<=31; i++){
+            let option = document.createElement('option');
+            option.text = i;
+            option.value = i;
+            day.appendChild(option);
+        }
+
+        for(let i=1; i<=12; i++){
+            let option = document.createElement('option');
+            option.text = i;
+            option.value = i;
+            month.appendChild(option);
+        }
+
+        for(let i=currentYear; i>=1900; i--){
+            let option = document.createElement('option');
+            option.text = i;
+            option.value = i;
+            year.appendChild(option);
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    /* background-image: linear-gradient(120deg, #3498db, #8e44ad); */
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 25px 30px;
+    /* background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+    overflow: hidden;
+}
+
+.container .title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3.5px;
+    width: 30px;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+}
+
+form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 40px);
+}
+
+form .input-box input,
+form .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 1rem;
+}
+
+form .input-box select {
+    width: 32%;
+    color: #666666;
+    cursor: pointer;
+}
+
+option:not(:first-of-type) {
+    color: #000;
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .gender-details .gender-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form .gender-select {
+    display: flex;
+    width: 45%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+.gender-select label {
+    font-size: 1.1rem;
+}
+
+.gender-select input {
+    height: 14px;
+    width: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+form .btn {
+    height: 45px;
+    margin: 30px 0;
+    position: relative;
+}
+
+form .btn button {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+}
+
+form .btn button:hover {
+    background: linear-gradient(-135deg, #3498db, #8e44ad);
+}
+
+form .btn i {
+    animation: slide 0.5s ease-in-out infinite alternate;
+}
+
+form .btn button:hover i {
+    animation: none;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+form .signup-link {
+    text-align: center;
+    display: block;
+}
+
+form .signup-link a {
+    color: #666666;
+    text-decoration: none;
+}
+
+form .signup-link a:hover {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        width: calc(100% / 2 - 20px);
+    }
+    form .gender-select {
+        flex-direction: column;
+    }
+}
+    
+@media screen and (max-width: 560px) {
+    form .user-details {
+        flex-direction: column;
+    }
+    form .user-details .input-box {
+        width: 100%;
+    }
+}
