@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact1 | Full page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="contact">
-            <div class="contact__details">
+            <div class="contact__details" data-aos="fade-right">
                 <p class="contact__details-text">Let's get in touch</p>
                 <img class="contact__details-img" src="Contact-us.svg" alt="contact">
                 <div class="contact__details-socials">
@@ -20,11 +21,11 @@
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="contact__form">
+            <div class="contact__form" data-aos="fade-left">
                 <div class="contact__form-heading">
                     <h1 class="contact__form-title">Contact Us</h1>
                     <p class="contact__form-subtitle">
@@ -55,7 +56,13 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/ccf941b7da.js" crossorigin="anonymous"></script>
     <script>
+        AOS.init({
+            duration: 1000,
+            delay: 200,
+        });
         const inputs = document.querySelectorAll(".contact__form-input .input");
         inputs.forEach(input => {
             input.addEventListener('input', function() {
@@ -67,6 +74,5 @@
             });
         });
     </script>
-    <script src="https://kit.fontawesome.com/ccf941b7da.js" crossorigin="anonymous"></script>
 </body>
 </html>
